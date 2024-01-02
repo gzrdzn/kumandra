@@ -23,11 +23,13 @@ open class Person(
 	val from: String,
 )
 
-class Archaeologist constructor(firstName: String, lastName: String, major: String) {
+class Archaeologist(firstName: String, lastName: String, major: String?) {
 	private val name: String
 	
+	constructor(firstName: String, lastName: String) : this(firstName, lastName, null)
+	
 	init {
-	    this.name = "$firstName $lastName"
+		this.name = "$firstName $lastName"
 	}
 }
 
