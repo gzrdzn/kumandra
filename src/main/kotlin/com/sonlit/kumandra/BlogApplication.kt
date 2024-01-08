@@ -17,7 +17,7 @@ fun main(args: Array<String>) {
 //	runApplication<BlogApplication>(*args)
 	println("Hello World!")
 	
-	val bibleStudyLeader = Leader("Abraham")
+	val bibleStudyLeader = Leader("abraham")
 	println(bibleStudyLeader.firstName)
 	bibleStudyLeader.topic = "Book of Genesis"
 	println(bibleStudyLeader.topic)
@@ -61,7 +61,8 @@ class Leader(val firstName: String, topic: String = "General") {
 	
 	var topic = topic 
 		get() {
-			println("$firstName is leading $field.")
+			val name = EnglishUtility().capitalize(firstName)
+			println("$name is leading $field.")
 			return field
 		}
 		set(value) {
