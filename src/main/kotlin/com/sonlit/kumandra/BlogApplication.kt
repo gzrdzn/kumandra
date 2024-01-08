@@ -61,12 +61,16 @@ class Leader(val firstName: String, topic: String = "General") {
 	
 	var topic = topic 
 		get() {
-			val name = EnglishUtility().capitalize(firstName)
-			println("$name is leading $field.")
+//			val name = EnglishUtility().capitalize(firstName)
+			println("${firstName.capitalize()} is leading $field.")
 			return field
 		}
 		set(value) {
 			println("$firstName is updating topic to $value.")
 			field = value
 		}
+}
+
+fun String.capitalize(): String {
+	return this.replaceFirstChar(Char::uppercase)
 }
