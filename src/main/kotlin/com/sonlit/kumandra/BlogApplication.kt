@@ -26,6 +26,11 @@ fun main(args: Array<String>) {
 	val person2 = Person("2", "Andrew", "Galilee")
 	val person3 = Person("3", "Philip", "Jordan")
 	listOfStudents(person1, person2, person3)
+	// Using spread operator
+	// https://kotlinlang.org/docs/functions.html#variable-number-of-arguments-varargs
+	// https://stackoverflow.com/questions/39389003/kotlin-asterisk-operator-before-variable-name-or-spread-operator-in-kotlin
+	val persons = arrayOf(person1, person2, person3)
+	listOfStudents(*persons)
 }
 
 typealias dig = Set<Person>
