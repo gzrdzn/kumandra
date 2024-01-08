@@ -13,6 +13,11 @@ class BlogApplication
 fun main(args: Array<String>) {
 //	runApplication<BlogApplication>(*args)
 	println("Hello World!")
+	
+	val bibleStudyLeader = Leader("Abraham")
+	println(bibleStudyLeader.firstName)
+	bibleStudyLeader.topic = "Book of Genesis"
+	println(bibleStudyLeader.topic)
 }
 
 typealias dig = Set<Person>
@@ -33,3 +38,15 @@ class Archaeologist(firstName: String, lastName: String, major: String?) {
 	}
 }
 
+class Leader(val firstName: String, topic: String = "General") {
+	
+	var topic = topic 
+		get() {
+			println("$firstName is leading $field.")
+			return field
+		}
+		set(value) {
+			println("$firstName is updating topic to $value.")
+			field = value
+		}
+}
