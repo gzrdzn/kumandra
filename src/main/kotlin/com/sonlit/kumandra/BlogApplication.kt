@@ -21,6 +21,11 @@ fun main(args: Array<String>) {
 	println(bibleStudyLeader.firstName)
 	bibleStudyLeader.topic = "Book of Genesis"
 	println(bibleStudyLeader.topic)
+	
+	val person1 = Person("1", "Peter", "Galilee")
+	val person2 = Person("2", "Andrew", "Galilee")
+	val person3 = Person("3", "Philip", "Jordan")
+	listOfStudents(person1, person2, person3)
 }
 
 typealias dig = Set<Person>
@@ -30,6 +35,12 @@ open class Person(
 	val name: String,
 	val from: String,
 )
+
+fun listOfStudents(vararg persons: Person) {
+	for (person in persons) {
+		println("${person.id}: ${person.name}")
+	}
+}
 
 class Archaeologist(firstName: String, lastName: String, major: String?) {
 	private val name: String
