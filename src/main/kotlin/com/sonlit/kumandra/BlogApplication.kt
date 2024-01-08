@@ -10,6 +10,9 @@ class BlogApplication
 /**
  * TBC: https://disneypr.udemy.com/course/kotlin-for-java-developers/learn/lecture/7792736#overview
  */
+val TOTAL_BOOKS_REFORMED_BIBLE = 66
+val TOTAL_BOOKS_CATHOLIC_BIBLE = 73
+
 fun main(args: Array<String>) {
 //	runApplication<BlogApplication>(*args)
 	println("Hello World!")
