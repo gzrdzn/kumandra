@@ -22,28 +22,30 @@ fun main(args: Array<String>) {
 	bibleStudyLeader.topic = "Book of Genesis"
 	println(bibleStudyLeader.topic)
 	
-	val person1 = Person("1", "Peter", "Galilee")
-	val person2 = Person("2", "Andrew", "Galilee")
-	val person3 = Person("3", "Philip", "Jordan")
-	listOfStudents(person1, person2, person3)
+	val student1 = Student("Peter", "Jonah")
+	val student2 = Student("Andrew", "Jonah")
+	val student3 = Student("Philip", "Noah")
+	listOfStudents(student1, student2, student3)
 	// Using spread operator
 	// https://kotlinlang.org/docs/functions.html#variable-number-of-arguments-varargs
 	// https://stackoverflow.com/questions/39389003/kotlin-asterisk-operator-before-variable-name-or-spread-operator-in-kotlin
-	val persons = arrayOf(person1, person2, person3)
-	listOfStudents(*persons)
+	val students = arrayOf(student1, student2, student3)
+	listOfStudents(*students)
+	
+	val lamb = Animal("lamb")
+	val lion = Animal("lion")
+	val human = Human()
+	lamb.description()
+	lion.description()
+	human.description()
 }
 
 typealias dig = Set<Person>
 
-open class Person(
-	val id: String,
-	val name: String,
-	val from: String,
-)
 
-fun listOfStudents(vararg persons: Person) {
-	for (person in persons) {
-		println("${person.id}: ${person.name}")
+fun listOfStudents(vararg students: Student) {
+	for (student in students) {
+		println("${student.id}: ${student.name}")
 	}
 }
 
