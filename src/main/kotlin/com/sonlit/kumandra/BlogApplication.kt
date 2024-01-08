@@ -31,10 +31,15 @@ fun main(args: Array<String>) {
 	
 	val lamb = Animal("lamb")
 	val lion = Animal("lion")
-	val human = Human()
+	val human = Human("baby")
 	lamb.description()
 	lion.description()
 	human.description()
+	
+	val man = Man()
+	man.description()
+	val woman = Woman()
+	woman.description()
 }
 
 typealias dig = Set<Person>

@@ -11,7 +11,19 @@ class Animal(kind: String): Creature(kind) {
     override fun birthDate(): Int = 18000101
 }
 
-class Human: Creature(kind = "human") {
+open class Human(
+    val gender: String
+): Creature(kind = "human") {
     override fun birthDate(): Int = 19000101
     override fun description() = println("This kind of creature is a $kind and is created in the image of God.")
+}
+
+class Man: Human(gender = "male") {
+    override fun description() = println("This kind of creature is a ${javaClass.simpleName} " +
+        "and is created in the image of God.")
+}
+
+class Woman: Human(gender = "female") {
+    override fun description() = println("This kind of creature is a ${javaClass.simpleName} " +
+        "and is created in the image of God.")
 }
