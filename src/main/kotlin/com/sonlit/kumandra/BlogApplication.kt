@@ -8,7 +8,7 @@ import org.springframework.boot.runApplication
 class BlogApplication
 
 /**
- * TBC: https://disneypr.udemy.com/course/kotlin-for-java-developers/learn/lecture/7792736#overview
+ * TBC: https://disneypr.udemy.com/course/kotlin-for-java-developers/learn/lecture/7792752#overview
  */
 val TOTAL_BOOKS_REFORMED_BIBLE = 66
 val TOTAL_BOOKS_CATHOLIC_BIBLE = 73
@@ -26,9 +26,6 @@ fun main(args: Array<String>) {
 	val student2 = Student("Andrew", "Jonah")
 	val student3 = Student("Philip", "Noah")
 	listOfStudents(student1, student2, student3)
-	// Using spread operator
-	// https://kotlinlang.org/docs/functions.html#variable-number-of-arguments-varargs
-	// https://stackoverflow.com/questions/39389003/kotlin-asterisk-operator-before-variable-name-or-spread-operator-in-kotlin
 	val students = arrayOf(student1, student2, student3)
 	listOfStudents(*students)
 	
@@ -63,7 +60,6 @@ class Leader(val firstName: String, topic: String = "General") {
 	
 	var topic = topic 
 		get() {
-//			val name = EnglishUtility().capitalize(firstName)
 			println("${firstName.capitalize()} is leading $field.")
 			return field
 		}

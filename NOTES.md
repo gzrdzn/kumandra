@@ -15,3 +15,7 @@ val intArray = intArrayOf(5, 4, 3, 2, 1, 0)
 val digits = Array(10) { i -> i }
 val strDigits = digits as String
 ```
+
+Using spread operator
+https://kotlinlang.org/docs/functions.html#variable-number-of-arguments-varargs
+https://stackoverflow.com/questions/39389003/kotlin-asterisk-operator-before-variable-name-or-spread-operator-in-kotlin
