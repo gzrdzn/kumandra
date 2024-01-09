@@ -42,6 +42,7 @@ fun main(args: Array<String>) {
 	woman.description()
 
 	SpaceSubmarine("underwater")
+	println(Earth.description())
 }
 
 typealias dig = Set<Person>
