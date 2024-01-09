@@ -40,6 +40,8 @@ fun main(args: Array<String>) {
 	man.description()
 	val woman = Woman()
 	woman.description()
+
+	SpaceSubmarine("underwater")
 }
 
 typealias dig = Set<Person>
