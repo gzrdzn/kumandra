@@ -50,6 +50,22 @@ fun main(args: Array<String>) {
 
 	
 	println("${LegalStatements.COPYRIGHT}")
+
+
+	/**
+	 * For Loop, Ranges
+	 */
+	val range = 1..5
+	val charRange = 'a'..'z'
+	val stringRange = "ABC".."XYZ"
+	print("3 in range: ")
+	println(3 in range)
+	print("'q' in charRange: ")
+	println('q' in charRange)
+	print("\"CCC\" in stringRange: ")
+	println("CCC" in stringRange)
+	print("\"CCCCCC\" in stringRange: ")
+	println("CCCCCC" in stringRange)
 }
 
 typealias dig = Set<Person>
