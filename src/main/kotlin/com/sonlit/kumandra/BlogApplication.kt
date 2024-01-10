@@ -47,6 +47,9 @@ fun main(args: Array<String>) {
 	println(Earth.description())
 	
 	println("Total Continents: ${Continents.entries.size}")
+
+	
+	println("${LegalStatements.COPYRIGHT}")
 }
 
 typealias dig = Set<Person>
