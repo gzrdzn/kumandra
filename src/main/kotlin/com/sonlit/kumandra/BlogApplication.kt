@@ -38,11 +38,15 @@ fun main(args: Array<String>) {
 	
 	val man = Man()
 	man.description()
+	println("Man is unique with his reproductive system: ${Man.REPRODUCTIVE_FUNCTION}")
 	val woman = Woman()
 	woman.description()
+	println("Man is unique with his reproductive system: ${Woman.REPRODUCTIVE_FUNCTION}")
 
 	SpaceSubmarine("underwater")
 	println(Earth.description())
+	
+	println("Total Continents: ${Continents.entries.size}")
 }
 
 typealias dig = Set<Person>

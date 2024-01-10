@@ -21,9 +21,17 @@ open class Human(
 class Man: Human(gender = "male") {
     override fun description() = println("This kind of creature is a ${javaClass.simpleName} " +
         "and is created in the image of God.")
+    
+    companion object {
+        const val REPRODUCTIVE_FUNCTION = "PENIS"
+    }
 }
 
 class Woman: Human(gender = "female") {
     override fun description() = println("This kind of creature is a ${javaClass.simpleName} " +
         "and is created in the image of God.")
+    
+    companion object {
+        const val REPRODUCTIVE_FUNCTION = "VAGINA"
+    }
 }
