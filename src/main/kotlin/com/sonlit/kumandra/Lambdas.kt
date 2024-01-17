@@ -24,16 +24,14 @@ class Lambdas {
 //}
 
     /** Lambdas With Receivers */
-    fun countToTen(): String {
-        val numbers = StringBuilder()
+    fun countToTen(): String =
         // with() converts the passed-in Instance into a Receiver.
         // inside the lambda, we don't need to explicitly reference the Receiver
         // since the Receiver is "this".
-        return with(numbers) {
+        with(StringBuilder()) {
             for (i in 1..10) {
                 append(i).append(",")
             }
             toString().dropLast(1)
         }
-    }
 }
