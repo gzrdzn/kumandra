@@ -16,11 +16,11 @@ class Lambdas {
     }
 
     fun findByFirstName(students: List<Student>, firstName: String) {
-        for (student in students) {
-            if (student.firstName == firstName) {
-                return println("Yes, there's a student with first name $firstName.")
+        students.forEach { student ->
+            return if (student.firstName == firstName) {
+                println("Yes, there's a student with first name $firstName.")
             } else {
-                return println("No, there is no $firstName.")
+                println("No, there is no $firstName.")
             }
         }
     }
