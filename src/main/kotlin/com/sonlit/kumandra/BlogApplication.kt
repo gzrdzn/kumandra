@@ -55,21 +55,53 @@ fun main(args: Array<String>) {
 	/**
 	 * For Loop, Ranges
 	 */
-	val range = 1..5
-	val charRange = 'a'..'z'
-	val stringRange = "ABC".."XYZ"
-	print("3 in range: ")
-	println(3 in range)
-	print("'q' in charRange: ")
-	println('q' in charRange)
-	print("\"CCC\" in stringRange: ")
-	println("CCC" in stringRange)
-	print("\"CCCCCC\" in stringRange: ")
-	println("CCCCCC" in stringRange)
+//	val range = 1..5
+//	for (i in range){
+//		println(i)
+//	}
+//	val charRange = 'a'..'z'
+//	val strRange = "ABC".."XYZ"
+//	print("3 in range: ")
+//	println(3 in range)
+//	print("'q' in charRange: ")
+//	println('q' in charRange)
+//	print("\"CCC\" in strRange: ")
+//	println("CCC" in strRange)
+//	print("\"CCCCCC\" in strRange: ")
+//	println("CCCCCC" in strRange)
+//	print("\"ZZ\" in strRange: ")
+//	println("ZZ" in strRange)
+//	val backwardRange = 5.downTo(1)
+//	println(5 in backwardRange)
+//	val reversedRange = range.reversed()
+//	val stepRange = 3..15
+//	val stepThree = stepRange.step(3)
+//	println(stepThree)
+//	for (num in 1..10 step 4) {
+//		println("Step by 4 from 1 to 10: $num")
+//	}
+//	for (num in 5 downTo 1 step 2) {
+//		println("Step by 2 from 5 to 1: $num")
+//	}
+//	for (i in 0 until 2) {
+//		println("Search index until 2: $i")
+//	}
+//	val aString = "another string"
+//	val stringRange = 0..aString.length
+
+//	Loops().printSeasons()
+	
+//	println(AgeGroup().getNumber("a3"))
+
+//	run { println("I'm in a lambda!") }
+//	run(::sayHi)
+//	Lambdas().getLamdda()
+	println(Lambdas().countToTen())
 }
 
-typealias dig = Set<Person>
+fun sayHi() = println("just saying 'Hi'!")
 
+typealias dig = Set<Person>
 
 fun listOfStudents(vararg students: Student) {
 	for (student in students) {
