@@ -15,13 +15,23 @@ class Lambdas {
         println("students: ${ students.map (Student::firstName) }")
     }
 
-    //fun countToTen(): String {
-//	val numbers = StringBuilder()
-//	for (i in 1..10) {
-//		numbers.append(i).append(",")
-//	}
-//	return numbers.toString().dropLast(1)
-//}
+    fun findByFirstName(students: List<Student>, firstName: String) {
+        for (student in students) {
+            if (student.firstName == firstName) {
+                return println("Yes, there's a student with first name $firstName.")
+            } else {
+                return println("No, there is no $firstName.")
+            }
+        }
+    }
+    
+    fun countToTen(): String {
+        val numbers = StringBuilder()
+        for (i in 1..10) {
+            numbers.append(i).append(",")
+        }
+        return numbers.toString().dropLast(1)
+    }
 
     /** Lambdas With Receivers */
     fun countToTenReceiver(): String =
@@ -35,10 +45,11 @@ class Lambdas {
             toString().dropLast(1)
         }
     
-    /** 'apply' always returns the Instance object. 
+    /** 'apply' always returns the Receiver object. 
      * we don't pass an instance to apply
-     * but, we use an instance to apply a lambda.
-     * */
+     * but, we use an instance to apply a lambda 
+     * which returns the Receiver object.
+     */
     fun countToTenApply(): String =
         StringBuilder().apply() {
             for (i in 1..10) {
