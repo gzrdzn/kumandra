@@ -16,9 +16,10 @@ class Lambdas {
     }
 
     fun findByFirstName(students: List<Student>, firstName: String) {
-        students.forEach { student ->
-            return if (student.firstName == firstName) {
+        students.forEach returnBlock@ { student ->
+            if (student.firstName == firstName) {
                 println("Yes, there's a student with first name $firstName.")
+                return@returnBlock // local return, returning from the lambda instead of function
             } else {
                 println("No, there is no $firstName.")
             }
