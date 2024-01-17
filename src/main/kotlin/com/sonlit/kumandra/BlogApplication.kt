@@ -96,7 +96,7 @@ fun main(args: Array<String>) {
 //	run { println("I'm in a lambda!") }
 //	run(::sayHi)
 //	Lambdas().getLamdda()
-	println(Lambdas().countToTen())
+	println(Lambdas().countToTenApply())
 }
 
 fun sayHi() = println("just saying 'Hi'!")

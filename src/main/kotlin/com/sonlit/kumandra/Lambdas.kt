@@ -24,7 +24,7 @@ class Lambdas {
 //}
 
     /** Lambdas With Receivers */
-    fun countToTen(): String =
+    fun countToTenReceiver(): String =
         // with() converts the passed-in Instance into a Receiver.
         // inside the lambda, we don't need to explicitly reference the Receiver
         // since the Receiver is "this".
@@ -34,4 +34,15 @@ class Lambdas {
             }
             toString().dropLast(1)
         }
+    
+    /** 'apply' always returns the Instance object. 
+     * we don't pass an instance to apply
+     * but, we use an instance to apply a lambda.
+     * */
+    fun countToTenApply(): String =
+        StringBuilder().apply() {
+            for (i in 1..10) {
+                append(i).append(",")
+            }
+        }.toString().dropLast(1)
 }
