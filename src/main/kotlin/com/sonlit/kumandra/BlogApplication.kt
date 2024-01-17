@@ -100,6 +100,7 @@ fun main(args: Array<String>) {
 	println("--------------------")
 	Lambdas().findByFirstName(students.toList(),"Peter")
 	Lambdas().findByFirstName(students.toList(),"one")
+	Lambdas().findByLastName(students.toList(), "Noah")
 }
 
 fun sayHi() = println("just saying 'Hi'!")

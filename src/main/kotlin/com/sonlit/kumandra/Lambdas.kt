@@ -25,6 +25,16 @@ class Lambdas {
             }
         }
     }
+
+    fun findByLastName(students: List<Student>, lastName: String) {
+        return students.forEach { student ->
+            if (student.lastName == lastName) {
+                println("Yes, there's a student with last name $lastName.")
+            } else {
+                println("No, there is no $lastName.")
+            }
+        }
+    }
     
     fun countToTen(): String {
         val numbers = StringBuilder()
