@@ -35,6 +35,20 @@ class Lambdas {
             }
         }
     }
+
+    /**
+     * We want to lowercase the Receiver object associated with the local apply
+     * which is the static string value, and then we want to uppercase the Receiver
+     * object with the lambda associated with the incomingString label.
+     */
+    fun getAppliedString(string: String): String {
+        return string.apply incomingString@ { 
+            "Processing".apply { 
+                println(lowercase())
+                println(this@incomingString.uppercase())
+            }
+        }
+    }
     
     fun countToTen(): String {
         val numbers = StringBuilder()
