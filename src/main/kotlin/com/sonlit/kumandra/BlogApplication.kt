@@ -106,6 +106,7 @@ fun main(args: Array<String>) {
 	// Collections vs Sequences
 	// println not executed until there's a terminal command which doesn't exist in sequence
 	// but a terminal command exist in list.
+	// Also, collections runs through every element, but sequence runs each element until condition or operation met.
 	listOf("John", "Mary", "Jude", "Paul", "Matthew").asSequence()
 		.map { println("mapping $it"); it.uppercase() }
 		.filter { println("filtering $it"); it[0] == 'J'}
