@@ -102,6 +102,14 @@ fun main(args: Array<String>) {
 	Lambdas().findByFirstName(students.toList(),"one")
 	Lambdas().findByLastName(students.toList(), "Noah")
 	Lambdas().getAppliedString("small people")
+	
+	// Collections vs Sequences
+	// println not executed until there's a terminal command which doesn't exist in sequence
+	// but a terminal command exist in list.
+	listOf("John", "Mary", "Jude", "Paul", "Matthew").asSequence()
+		.map { println("mapping $it"); it.uppercase() }
+		.filter { println("filtering $it"); it[0] == 'J'}
+		//.toList() // uncomment to see printout.
 }
 
 fun sayHi() = println("just saying 'Hi'!")
