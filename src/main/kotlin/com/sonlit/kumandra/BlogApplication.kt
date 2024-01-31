@@ -9,7 +9,7 @@ import java.math.BigDecimal
 class BlogApplication
 
 /**
- * TBC: https://disneypr.udemy.com/course/kotlin-for-java-developers/learn/lecture/7792818#overview
+ * TBC: https://disneypr.udemy.com/course/kotlin-for-java-developers/learn/lecture/7792822#overview
  */
 val TOTAL_BOOKS_REFORMED_BIBLE = 66
 val TOTAL_BOOKS_CATHOLIC_BIBLE = 73

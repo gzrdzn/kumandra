@@ -43,7 +43,8 @@ class GenericsLesson {
         println("Appended: ${item1.append(item2)}")
     }
     
-    // Reified Parameters
+    // Reified Parameters (type is NOT erased at runtime)
+    // - only use reified if you need to check a type inside the function.
     inline fun <reified T> getElementsOfType(list: List<Any>): List<T> {
         var newList: MutableList<T> = mutableListOf()
         for (element in list) {
