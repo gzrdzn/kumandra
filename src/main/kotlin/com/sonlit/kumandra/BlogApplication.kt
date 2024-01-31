@@ -2,6 +2,7 @@ package com.sonlit.kumandra
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
+import java.math.BigDecimal
 
 // TODO: commenting to finish Udemy's Kotlin tutorial first. Then, will finish Spring Boot Kotlin's tutorial.
 //@SpringBootApplication
@@ -119,6 +120,8 @@ fun main(args: Array<String>) {
 	MeasurementConverter().convertToInt(
 		listOf(1.5f, 35.2495, 9, -4.2, 2L)
 	)
+	
+	val bigDecimalsOnly = GenericsLesson().getElementsOfType<BigDecimal>()
 }
 
 fun sayHi() = println("just saying 'Hi'!")

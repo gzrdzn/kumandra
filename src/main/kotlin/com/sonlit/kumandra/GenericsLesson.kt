@@ -42,4 +42,16 @@ class GenericsLesson {
     fun <T> append(item1: T, item2: T) where T: CharSequence, T: Appendable {
         println("Appended: ${item1.append(item2)}")
     }
+    
+    // Reified Parameters
+    fun <T> getElementsOfType(list: List<Any>): List<T> {
+        var newList: MutableList<T> = mutableListOf()
+        for (element in list) {
+            if (element is T) {
+                newList.add(element)
+            }
+        }
+        
+        return newList
+    }
 }
