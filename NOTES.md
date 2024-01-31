@@ -16,6 +16,11 @@ val digits = Array(10) { i -> i }
 val strDigits = digits as String
 ```
 
+## Generics
+https://kotlinlang.org/docs/generics.html
+https://typealias.com/guides/star-projections-and-how-they-work/
+I need to revisit the uses of Generics in Kotlin.
+
 Using spread operator
 https://kotlinlang.org/docs/functions.html#variable-number-of-arguments-varargs
 https://stackoverflow.com/questions/39389003/kotlin-asterisk-operator-before-variable-name-or-spread-operator-in-kotlin

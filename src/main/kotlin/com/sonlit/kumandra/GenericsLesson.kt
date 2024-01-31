@@ -36,5 +36,10 @@ class GenericsLesson {
         for (e in this) {
             print("$e /")
         }
+        append(StringBuilder("string1"), StringBuilder("string2"))
+    }
+    
+    fun <T> append(item1: T, item2: T) where T: CharSequence, T: Appendable {
+        println("Appended: ${item1.append(item2)}")
     }
 }
