@@ -44,7 +44,7 @@ class GenericsLesson {
     }
     
     // Reified Parameters
-    inline fun <T> getElementsOfType(list: List<Any>): List<T> {
+    inline fun <reified T> getElementsOfType(list: List<Any>): List<T> {
         var newList: MutableList<T> = mutableListOf()
         for (element in list) {
             if (element is T) {
