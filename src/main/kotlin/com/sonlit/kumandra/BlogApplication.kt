@@ -115,6 +115,10 @@ fun main(args: Array<String>) {
 	GenericsLesson().printPriceList()
 	GenericsLesson().printProductList()
 	GenericsLesson().printActivities()
+	println()
+	MeasurementConverter().convertToInt(
+		listOf(1.5f, 35.2495, 9, -4.2, 2L)
+	)
 }
 
 fun sayHi() = println("just saying 'Hi'!")
