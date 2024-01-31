@@ -122,10 +122,17 @@ fun main(args: Array<String>) {
 //	)
 	
 	// Generics: Using Reified Parameters
-	val mixedList: List<Any> = listOf("string", 1, BigDecimal(22.5), 'c', -2.4f, BigDecimal(-203.3434))
+	// a function that takes Any type, but returns values based on the declared parameter type
+	val mixedList: List<Any> = listOf("a word", 1, BigDecimal(22.5), 'c', -2.4f, BigDecimal(-203.3434))
+	// show only big decimals from list
 	val bigDecimalsOnly = GenericsLesson().getElementsOfType<BigDecimal>(mixedList)
 	for (item in bigDecimalsOnly) {
 		println("big decimal: $item")
+	}
+	// show only strings from list
+	val stringsOnly = GenericsLesson().getElementsOfType<String>(mixedList)
+	for (item in stringsOnly) {
+		println("string: $item")
 	}
 }
 
