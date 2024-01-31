@@ -98,30 +98,35 @@ fun main(args: Array<String>) {
 //	run(::sayHi)
 //	Lambdas().getLamdda()
 	//println(Lambdas().countToTenApply())
-	println("--------------------")
-	Lambdas().findByFirstName(students.toList(),"Peter")
-	Lambdas().findByFirstName(students.toList(),"one")
-	Lambdas().findByLastName(students.toList(), "Noah")
-	Lambdas().getAppliedString("small people")
+//	println("--------------------")
+//	Lambdas().findByFirstName(students.toList(),"Peter")
+//	Lambdas().findByFirstName(students.toList(),"one")
+//	Lambdas().findByLastName(students.toList(), "Noah")
+//	Lambdas().getAppliedString("small people")
 	
 	// Collections vs Sequences
 	// println not executed until there's a terminal command which doesn't exist in sequence
 	// but a terminal command exist in list.
 	// Also, collections runs through every element, but sequence runs each element until condition or operation met.
-	listOf("John", "Mary", "Jude", "Paul", "Matthew").asSequence()
-		.map { println("mapping $it"); it.uppercase() }
-		.filter { println("filtering $it"); it[0] == 'J'}
-		//.toList() // uncomment to see printout.
+//	listOf("John", "Mary", "Jude", "Paul", "Matthew").asSequence()
+//		.map { println("mapping $it"); it.uppercase() }
+//		.filter { println("filtering $it"); it[0] == 'J'}
+//		//.toList() // uncomment to see printout.
 
-	GenericsLesson().printPriceList()
-	GenericsLesson().printProductList()
-	GenericsLesson().printActivities()
-	println()
-	MeasurementConverter().convertToInt(
-		listOf(1.5f, 35.2495, 9, -4.2, 2L)
-	)
+//	GenericsLesson().printPriceList()
+//	GenericsLesson().printProductList()
+//	GenericsLesson().printActivities()
+//	println()
+//	MeasurementConverter().convertToInt(
+//		listOf(1.5f, 35.2495, 9, -4.2, 2L)
+//	)
 	
-	val bigDecimalsOnly = GenericsLesson().getElementsOfType<BigDecimal>()
+	// Generics: Using Reified Parameters
+	val mixedList: List<Any> = listOf("string", 1, BigDecimal(22.5), 'c', -2.4f, BigDecimal(-203.3434))
+	val bigDecimalsOnly = GenericsLesson().getElementsOfType<BigDecimal>(mixedList)
+	for (item in bigDecimalsOnly) {
+		println("big decimal: $item")
+	}
 }
 
 fun sayHi() = println("just saying 'Hi'!")
