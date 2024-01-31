@@ -111,6 +111,9 @@ fun main(args: Array<String>) {
 		.map { println("mapping $it"); it.uppercase() }
 		.filter { println("filtering $it"); it[0] == 'J'}
 		//.toList() // uncomment to see printout.
+
+	GenericsLesson().printPriceList()
+	GenericsLesson().printProductList()
 }
 
 fun sayHi() = println("just saying 'Hi'!")
