@@ -114,6 +114,7 @@ fun main(args: Array<String>) {
 
 	GenericsLesson().printPriceList()
 	GenericsLesson().printProductList()
+	GenericsLesson().printActivities()
 }
 
 fun sayHi() = println("just saying 'Hi'!")

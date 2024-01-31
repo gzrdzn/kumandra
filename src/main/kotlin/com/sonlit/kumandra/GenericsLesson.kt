@@ -27,4 +27,14 @@ class GenericsLesson {
         }
     }
     
+    fun printActivities() {
+        listOf("dance", "soccer", "wrestle", "pottery", "spanish", "study", "piano", "game", "rest").printElementsWithSlashAfter()
+    }
+    
+    // extension function using generics
+    private fun <T> List<T>.printElementsWithSlashAfter() {
+        for (e in this) {
+            print("$e /")
+        }
+    }
 }
