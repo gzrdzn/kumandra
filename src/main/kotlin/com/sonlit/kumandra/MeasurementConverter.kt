@@ -11,4 +11,10 @@ class MeasurementConverter {
             println("${num.toInt()}")
         }
     }
+    
+    fun convertToFirstDigit(collection: List<Number>) {
+        for (num in collection) {
+            println(num.toInt())
+        }
+    }
 }

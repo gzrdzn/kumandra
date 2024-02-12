@@ -18,36 +18,36 @@ fun main(args: Array<String>) {
 //	runApplication<BlogApplication>(*args)
 	println("Hello World!")
 	
-	val bibleStudyLeader = Leader("abraham")
-	println(bibleStudyLeader.firstName)
-	bibleStudyLeader.topic = "Book of Genesis"
-	println(bibleStudyLeader.topic)
-	
-	val student1 = Student("Peter", "Jonah")
-	val student2 = Student("Andrew", "Jonah")
-	val student3 = Student("Philip", "Noah")
-	listOfStudents(student1, student2, student3)
-	val students = arrayOf(student1, student2, student3)
-	listOfStudents(*students)
-	
-	val lamb = Animal("lamb")
-	val lion = Animal("lion")
-	val human = Human("baby")
-	lamb.description()
-	lion.description()
-	human.description()
-	
-	val man = Man()
-	man.description()
-	println("Man is unique with his reproductive system: ${Man.REPRODUCTIVE_FUNCTION}")
-	val woman = Woman()
-	woman.description()
-	println("Man is unique with his reproductive system: ${Woman.REPRODUCTIVE_FUNCTION}")
-
-	SpaceSubmarine("underwater")
-	println(Earth.description())
-	
-	println("Total Continents: ${Continents.entries.size}")
+//	val bibleStudyLeader = Leader("abraham")
+//	println(bibleStudyLeader.firstName)
+//	bibleStudyLeader.topic = "Book of Genesis"
+//	println(bibleStudyLeader.topic)
+//	
+//	val student1 = Student("Peter", "Jonah")
+//	val student2 = Student("Andrew", "Jonah")
+//	val student3 = Student("Philip", "Noah")
+//	listOfStudents(student1, student2, student3)
+//	val students = arrayOf(student1, student2, student3)
+//	listOfStudents(*students)
+//	
+//	val lamb = Animal("lamb")
+//	val lion = Animal("lion")
+//	val human = Human("baby")
+//	lamb.description()
+//	lion.description()
+//	human.description()
+//	
+//	val man = Man()
+//	man.description()
+//	println("Man is unique with his reproductive system: ${Man.REPRODUCTIVE_FUNCTION}")
+//	val woman = Woman()
+//	woman.description()
+//	println("Man is unique with his reproductive system: ${Woman.REPRODUCTIVE_FUNCTION}")
+//
+//	SpaceSubmarine("underwater")
+//	println(Earth.description())
+//	
+//	println("Total Continents: ${Continents.entries.size}")
 
 	
 	println("${LegalStatements.COPYRIGHT}")
@@ -134,6 +134,12 @@ fun main(args: Array<String>) {
 	for (item in stringsOnly) {
 		println("string: $item")
 	}
+	
+	// Contravariance
+	val roseTender = object: FlowerCare<Rose> {
+		override fun prune(flower: Rose) = println("I'm pruning a rose!")
+	}
+	val roseGarden = Garden<Rose>(listOf(Rose(), Rose()), roseTender)
 }
 
 fun sayHi() = println("just saying 'Hi'!")
