@@ -1,15 +1,10 @@
 package com.sonlit.kumandra
 
-open class Car {
-}
+open class Car
 
-class Toyota: Car() {
-    
-}
+class Toyota: Car()
 
-class Ford: Car() {
-    
-}
+class Ford: Car()
 
 fun runCars() {
     val cars1990 = mutableListOf(Car(), Car())
@@ -20,11 +15,11 @@ fun runCars() {
     val fords2025 = mutableListOf<Ford>()
     copyCars(fords1990, fords2025)
     
-    // This doesn't work because the destination requires a Ford type and we have given a Car type during copy cars.
+    // Since making the method declaration with a source param that writes out as a Type of the destination, this works.
     copyCars(fords1990, cars2025)
 }
 
-fun <T> copyCars(source: MutableList<T>, destination: MutableList<T>) {
+fun <T> copyCars(source: MutableList<out T>, destination: MutableList<T>) {
     for (car in source) {
         destination.add(car)
     }
